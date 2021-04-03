@@ -1,0 +1,16 @@
+﻿using System;
+
+namespace BankEncapsulation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var MyAccount = new BankAccount();
+            Console.WriteLine("Hey! How much you would like to deposit?");
+            var MyMoney = double.Parse(Console.ReadLine());
+            MyAccount.Deposit(MyMoney);
+            Console.WriteLine($"Here is your new balance, ${MyAccount.GetBalance()!!}");
+        }
+    }
+}
